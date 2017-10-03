@@ -9,6 +9,7 @@ cityModel.obj
 stadium.obj
 **/bin/**/*.exe
 **/bin/**/cudart*.dll
+**/bin/**/**/cud*.dll
 **/dynamic/*.cu
 **/dynamic/*.h
 *.zip

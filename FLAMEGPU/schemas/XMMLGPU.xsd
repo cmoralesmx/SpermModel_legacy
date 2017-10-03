@@ -42,8 +42,8 @@
 			<xs:extension base="xmml:environment_type">
 				<xs:sequence>
 					<xs:element ref="initFunctions" maxOccurs="1" minOccurs="0" />
-          <xs:element ref="exitFunctions" maxOccurs="1" minOccurs="0" />
-          <xs:element ref="stepFunctions" maxOccurs="1" minOccurs="0" />
+					<xs:element ref="exitFunctions" maxOccurs="1" minOccurs="0" />
+					<xs:element ref="stepFunctions" maxOccurs="1" minOccurs="0" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

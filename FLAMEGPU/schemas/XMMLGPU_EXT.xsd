@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:gpu="http://www.dcs.shef.ac.uk/~paul/XMMLGPU" xmlns:xmml="http://www.dcs.shef.ac.uk/~paul/XMML" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:redefine schemaLocation="./XMMLGPU.xsd"/>
+  <!-- complexType redefined to add the element 'definitions' -->
+  <xs:complexType name="environment_type">
+    <xs:complexContent>
+    <xs:extension base="xmmlgpu:environment_type">
+      <xs:sequence>
+        <!--FLAME GPU EXTENSIONS-->
+        <xs:element ref="definitions" minOccurs="0" maxOccurs="1" />
+        <!--END FLAME GPU EXTENSIONS-->
+        <xs:element ref="initFunctions" maxOccurs="1" minOccurs="0" />
+        <!-- FLAME 1.4 -->
+        <xs:element ref="exitFunctions" maxOccurs="1" minOccurs="0" />
+        <xs:element ref="stepFunctions" maxOccurs="1" minOccurs="0" />
+        <!-- FLAME 1.4 -->
+      </xs:sequence>
+    </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--FLAME GPU EXTENSIONS SECTION-->
+  <xs:complexType name="definition_type">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1" nillable="false" />
+      <xs:element name="value" type="xs:string" maxOccurs="1" minOccurs="1" nillable="false" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="definition" type="definition_type">
+  </xs:element>
+  <xs:complexType name="definitions_type">
+    <xs:sequence>
+      <xs:element ref="definition" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="definitions" type="definitions_type">
+  </xs:element>
+  <xs:complexType name="recursiveCondition_type">
+    <xs:complexContent>
+      <xs:extension base="xmml:condition_type">
+        <xs:sequence>
+          <xs:element name="maxItterations" type="xs:int" />
+          <xs:element name="mustEvaluateTo" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element substitutionGroup="xmml:condition" name="recursiveCondition" type="recursiveCondition_type">
+  </xs:element>
+  <!--END FLAME GPU EXTENSIONS-->
+</xs:schema>
