@@ -10,8 +10,8 @@ J. Rouwé. (2003, May) Collision detection with swept spheres and ellipsoids.
 */
 
 #include "float.h"
-#include "common.h"
-#include "collision_detection_header.h"
+#include "common/common.h"
+#include "OviductCollisionDetectionV1/collision_detection_header.h"
 #include "Model3DCodeCUDA.h"
 
 

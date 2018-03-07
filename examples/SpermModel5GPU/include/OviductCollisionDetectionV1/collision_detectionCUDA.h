@@ -10,8 +10,8 @@
 
 #include "helper_math.h"
 //#include "sphere_collisionCUDA.h"
-#include "sphere_collision_comprehensiveCUDA.h"
-#include "ModelTextureAccessCUDA.h"
+#include "OviductCollisionDetectionV1/sphere_collision_comprehensiveCUDA.h"
+#include "OviductCollisionDetectionV1/ModelTextureAccessCUDA.h"
 
 
 __device__ CollisionResult resolve_environment_collisions(const int currentSegment, const float3 &oldPosition, const float3 &direction, float distance_to_move, const float radius);

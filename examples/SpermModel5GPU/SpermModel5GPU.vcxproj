@@ -76,24 +76,24 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Console|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
-    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(NVCUDASAMPLES7_0_ROOT)\common\lib\x64;$(ProjectDir)libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Visualisation|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
-    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(NVCUDASAMPLES7_0_ROOT)\common\lib\x64;$(ProjectDir)libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
-    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(NVCUDASAMPLES7_0_ROOT)\common\lib\x64;$(ProjectDir)libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Visualisation|x64'">
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
-    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(NVCUDASAMPLES7_0_ROOT)\common\lib\x64;$(ProjectDir)libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Console|x64'">
     <ClCompile>
@@ -268,12 +268,6 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Visualisation|x64'">true</ExcludedFromBuild>
       <FileType>Document</FileType>
     </ClInclude>
-    <ClInclude Include="src\model\CollisionDetection\Common\common.h" />
-    <ClInclude Include="src\model\CollisionDetection\Common\cuda_matrix.h" />
-    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detectionCUDA.h" />
-    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detection_header.h" />
-    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\ModelTextureAccessCUDA.h" />
-    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\sphere_collision_comprehensiveCUDA.h" />
     <ClInclude Include="src\model\Model3DCodeCUDA.h" />
     <ClInclude Include="src\visualisation\visualisation.h" />
     <ClInclude Include="XMML.h">
