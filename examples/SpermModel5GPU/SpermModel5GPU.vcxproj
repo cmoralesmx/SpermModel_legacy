@@ -76,24 +76,24 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Console|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\inc;D:\Development\GPUFlame\Common;D:\Development\GPUFlame\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\lib\x64;D:\Development\External Components\cudpp-2.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
+    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Visualisation|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\inc;D:\Development\GPUFlame\Common;D:\Development\GPUFlame\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\lib\x64;D:\Development\External Components\cudpp-2.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
+    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Console|x64'">
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\inc;D:\Development\GPUFlame\Common;D:\Development\GPUFlame\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Development\External Components\cudpp-2.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
+    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Visualisation|x64'">
     <OutDir>..\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\inc;D:\Development\GPUFlame\Common;D:\Development\GPUFlame\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0\common\lib\x64;D:\Development\External Components\cudpp-2.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(NVCUDASAMPLES7_0_ROOT)\common\inc;$(ProjectDir)src\model\CollisionDetection\Common;$(ProjectDir)src\model\CollisionDetection\OviductCollisionDetectionV1;D:\Development\External Components\cudpp\include;$(WindowsSDK_LibraryPath_x86);$(IncludePath)</IncludePath>
+    <LibraryPath>$(IncludePath);$(VC_LibraryPath_x86);$(ProjectDir)lib;$(CUDA_INC_PATH_V7_0);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Console|x64'">
     <ClCompile>
@@ -190,6 +190,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;cudpp64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../lib/;%(AdditionalLibraryDirectories);$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
       <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
@@ -267,6 +268,13 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Visualisation|x64'">true</ExcludedFromBuild>
       <FileType>Document</FileType>
     </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\Common\common.h" />
+    <ClInclude Include="src\model\CollisionDetection\Common\cuda_matrix.h" />
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detectionCUDA.h" />
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detection_header.h" />
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\ModelTextureAccessCUDA.h" />
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\sphere_collision_comprehensiveCUDA.h" />
+    <ClInclude Include="src\model\Model3DCodeCUDA.h" />
     <ClInclude Include="src\visualisation\visualisation.h" />
     <ClInclude Include="XMML.h">
       <DependentUpon>..\..\FLAMEGPU\schemas\XMML.xsd</DependentUpon>
@@ -319,9 +327,15 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <SubType>Designer</SubType>
     </FLAMEGPU_Template_Build_Rule>
     <Xml Include="src\templates\FLAMEGPU_kernals.xslt" />
-    <Xml Include="src\templates\header.xslt" />
-    <Xml Include="src\templates\io.xslt" />
-    <Xml Include="src\templates\main.xslt" />
+    <Xml Include="src\templates\header.xslt">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="src\templates\io.xslt">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="src\templates\main.xslt">
+      <SubType>Designer</SubType>
+    </Xml>
     <Xml Include="src\templates\simulation.xslt" />
   </ItemGroup>
   <ItemGroup>

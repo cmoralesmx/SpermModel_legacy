@@ -38,7 +38,7 @@ struct CollisionDetails {
 __FLAME_GPU_INIT_FUNC__ void copyModelData() {
 
 	char data[500];
-
+	/*	The dat path is loaded from the 0.XML file */
 	int pathLength = getDataPath(data);
 
 	if (pathLength == 0) {

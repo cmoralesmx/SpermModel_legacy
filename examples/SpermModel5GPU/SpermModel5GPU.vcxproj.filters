@@ -27,6 +27,27 @@
       <Filter>visualisation</Filter>
     </ClInclude>
     <ClInclude Include="XMMLGPU_EXT.h" />
+    <ClInclude Include="src\model\Model3DCodeCUDA.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\Common\common.h">
+      <Filter>model\CollisionDetection\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\Common\cuda_matrix.h">
+      <Filter>model\CollisionDetection\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detection_header.h">
+      <Filter>model\CollisionDetection\OviductCollisionDetectionV1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\collision_detectionCUDA.h">
+      <Filter>model\CollisionDetection\OviductCollisionDetectionV1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\ModelTextureAccessCUDA.h">
+      <Filter>model\CollisionDetection\OviductCollisionDetectionV1</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\CollisionDetection\OviductCollisionDetectionV1\sphere_collision_comprehensiveCUDA.h">
+      <Filter>model\CollisionDetection\OviductCollisionDetectionV1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="..\..\FLAMEGPU\templates\FLAMEGPU_kernals.xslt">
@@ -81,6 +102,15 @@
     </Filter>
     <Filter Include="templates">
       <UniqueIdentifier>{cfd3edc4-6df4-4aee-9332-05135fdb0bdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="model\CollisionDetection">
+      <UniqueIdentifier>{a5d09179-b970-409d-a45a-fb235e68f90b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="model\CollisionDetection\Common">
+      <UniqueIdentifier>{1249f885-4558-4cef-aa18-1a45fb262dc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="model\CollisionDetection\OviductCollisionDetectionV1">
+      <UniqueIdentifier>{6b8a9f2a-50f7-4309-8575-a92261138a00}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
