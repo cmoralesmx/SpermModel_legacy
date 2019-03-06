@@ -14,7 +14,7 @@
 #include &lt;helper_cuda.h&gt;
 //#include &lt;helper_functions.h&gt;
 #include &lt;helper_math.h&gt;
-#include &lt;cudpp.h&gt;
+#include "cudpp/cudpp.h"
 
 // include FLAME kernels
 #include "FLAMEGPU_kernals.cu"

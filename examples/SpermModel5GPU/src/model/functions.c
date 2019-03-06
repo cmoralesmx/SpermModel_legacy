@@ -20,9 +20,9 @@
 
 #include <header.h>
 #include <helper_math.h>
-#include <collision_detectionCUDA.h>
-#include <common.h>
-#include <cuda_matrix.h>
+#include "OviductCollisionDetectionV1\collision_detectionCUDA.h"
+#include "Common\common.h"
+#include "Common\cuda_matrix.h"
 
 #define TOTAL_NO_OF_OOCYTES xmachine_memory_Oocyte_MAX
 
@@ -38,7 +38,7 @@ struct CollisionDetails {
 __FLAME_GPU_INIT_FUNC__ void copyModelData() {
 
 	char data[500];
-
+	/*	The dat path is loaded from the 0.XML file */
 	int pathLength = getDataPath(data);
 
 	if (pathLength == 0) {

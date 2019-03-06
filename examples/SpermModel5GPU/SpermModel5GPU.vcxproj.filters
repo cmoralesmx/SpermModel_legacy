@@ -27,6 +27,9 @@
       <Filter>visualisation</Filter>
     </ClInclude>
     <ClInclude Include="XMMLGPU_EXT.h" />
+    <ClInclude Include="src\model\Model3DCodeCUDA.h">
+      <Filter>model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="..\..\FLAMEGPU\templates\FLAMEGPU_kernals.xslt">
