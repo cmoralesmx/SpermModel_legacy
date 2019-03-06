@@ -1,1 +1,0 @@
-Release_Console\PedestrianLOD.exe "..\..\examples\PedestrianLOD\iterations\0.xml" 1

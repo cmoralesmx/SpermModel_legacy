@@ -1,1 +1,0 @@
-"Release_Console\Boids_Partitioning.exe" "..\..\examples\Boids_Partitioning\iterations\0.xml" 1

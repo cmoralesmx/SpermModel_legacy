@@ -1,1 +1,0 @@
-"Release_Visualisation\Boids_BruteForce.exe" "..\..\examples\Boids_BruteForce\iterations\0.xml"

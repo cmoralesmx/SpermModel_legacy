@@ -1,1 +1,0 @@
-Release_Visualisation\GameOfLife.exe "..\..\examples\GameOfLife\iterations\0.xml"

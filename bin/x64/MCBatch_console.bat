@@ -1,1 +1,0 @@
-"Release_Console\MCBatch.exe" "..\..\examples\MonteCarlo_BATCH\iterations\0.xml" 50
