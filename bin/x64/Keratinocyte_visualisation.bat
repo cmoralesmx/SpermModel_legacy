@@ -1,1 +1,0 @@
-Release_Visualisation\keratinocyte.exe "..\..\examples\Keratinocyte\iterations\0.xml"
