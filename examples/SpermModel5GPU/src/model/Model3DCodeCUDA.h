@@ -1,40 +1,20 @@
 
-/*Definition for the 3D model*/
-
 #ifndef _MODEL_3D_CODE_H
 #define _MODEL_3D_CODE_H 1
 
-#define FULL_MODEL 
+// Model data path: D:\_WIP_Data\Dev_Models\Pig\Base_Scale\test\initial_pig_oviduct.ovm
+// Curve data path: D:\_WIP_Data\Dev_Models\Pig\Base_Scale\test\muestra_2128_complete_scaled_x100_resampled_rotated2.crv
+// Transformations data path: D:\_WIP_Data\Dev_Models\Pig\Base_Scale\test\transformations.trx
+
+
+#define INCLUDE_DATA_FILE "D:\\_WIP_Data\\Dev_Models\\Pig\\Base_Scale\\17th_attempt\\export_cuda\\"
 
 #define NO_OF_SLICES 1201
 #define NO_OF_SLICES_MINUS_ONE 1200
 #define NO_OF_SEGMENTS NO_OF_SLICES_MINUS_ONE
 #define NO_OF_SEGMENTS_MINUS_ONE 1199
-
-
-#ifdef FULL_MODEL
-
-#define INCLUDE_DATA_FILE "D:\\_WIP_Data\\Final_Models\\Mouse\\Corrected_Scale\\Code_Models\\OviductA_Curve1\\"
-
-//#define NO_OF_VECTICES 326000
-//#define NO_OF_TRIANGLES 652086
+#define NO_OF_VECTICES 326000
 #define NO_OF_TRIANGLES 648930
-
-
-//#define NO_OF_VECTICES 338156
-//#define NO_OF_TRIANGLES 676406
-#else
-
-#define INCLUDE_DATA_FILE "D:\\_WIP_Data\\Final_Models\\Mouse\\Corrected_Scale\\Code_Models\\OviductNF_Curve1\\"
-
-//#define NO_OF_VECTICES 145149
-//#define NO_OF_TRIANGLES 288294
-#define NO_OF_TRIANGLES 287644
-
-//#define NO_OF_VECTICES 142125
-//#define NO_OF_TRIANGLES 282016
-
-#endif
 
 //mid point and radius of spheres surrounding each triangle
 static float4 TRIANGLE_BOUNDING_SPHERE_H[NO_OF_TRIANGLES];
